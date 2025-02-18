@@ -1,3 +1,6 @@
+body {
+    background-color: #EDEDED;
+}
 header {
     position: absolute;
     top: 35px;
@@ -18,4 +21,83 @@ header {
     text-transform: uppercase;
     max-width: 890px;
     text-align: center;
+}
+.search .input-group {
+    max-width: 954px;
+}
+.search .input-group .form-control {
+    height: 60px;
+    border-radius: 11px!important;
+    border: none;
+}
+.search .input-group .btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 0.25rem!important;
+    z-index: 99;
+}
+.filter {
+    margin: 20px 75px;
+    display: flex;
+    align-items: center;
+}
+.filter .select {
+    margin-right: 50px;
+}
+.filter .form-select {
+    border: none;
+    height: 50px;
+    border-radius: 11px;
+}
+.filter .count-recette {
+    text-align: right;
+}
+.filter .count-recette span {
+    font-family: 'Anton';
+}
+#recipe-result {
+    margin: 20px 75px;
+}
+#recipe-result .recipe {
+    border-radius: 11px;
+}
+#recipe-result .image-recipe {
+    object-fit: cover;
+    height: 253px;
+    width: 100%;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+#recipe-result .recipe-content {
+    background-color: white;
+    padding: 20px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    font-family: "Manrope", serif;
+    font-size: 14px;
+}
+#recipe-result .recipe-content h3 {
+    font-family: 'Anton';
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#recipe-result .recipe-content .separator {
+    display: block;
+    font-weight: bold;
+    color: #7A7A7A;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+#recipe-result .recipe-content .ingredient-container .single-ingredient {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#recipe-result .recipe-content .ingredient-container .single-ingredient .nom-ingredient {
+    font-weight: 500;
+}
+
+#recipe-result .recipe-content .ingredient-container .single-ingredient .dose-ingredient {
+    color: #7A7A7A;
 }
