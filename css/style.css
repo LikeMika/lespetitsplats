@@ -77,6 +77,19 @@ header {
     font-family: "Manrope", serif;
     font-size: 14px;
 }
+#recipe-result .recipe {
+    position:relative;
+}
+#recipe-result .recipe .time {
+    display:block;
+    position: absolute;
+    background-color: #FFD15B;
+    padding: 5px 15px;
+    border-radius: 11px;
+    font-size: 12px;
+    top: 20px;
+    right: 50px;
+}
 #recipe-result .recipe-content h3 {
     font-family: 'Anton';
     font-size: 18px;

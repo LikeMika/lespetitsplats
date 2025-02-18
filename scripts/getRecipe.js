@@ -8,6 +8,11 @@ function loadRecipe() {
         recipeContainer.classList.add('p3');
         recipeContainer.classList.add('recipe');
 
+        //time
+        const timeCapsule = document.createElement('span');
+        timeCapsule.classList.add('time');
+        timeCapsule.textContent = element.time+"min";
+
 
         //image
         const recipeImage = document.createElement('img')
@@ -68,6 +73,7 @@ function loadRecipe() {
             ingredientContainer.appendChild(ingredientColumn);
         })
 
+        recipeContainer.appendChild(timeCapsule);
         recipeContainer.appendChild(recipeImage);
         contentContainer.appendChild(recipeTitle);
         contentContainer.appendChild(recipeSeparator);
