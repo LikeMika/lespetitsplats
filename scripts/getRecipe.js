@@ -1,5 +1,56 @@
-console.log(recipes);
 const recipeResultContainer = document.getElementById('recipe-result');
+const selectIngredient = document.getElementById('ingredient-select');
+const selectAppliance = document.getElementById('appliance-select');
+const selectUstensil = document.getElementById('ustensil-select');
+
+const listAppliance = [];
+const listIngredient = [];
+const listUstensils = [];
+
+function getSelectElement() {
+    recipes.forEach(item => {
+        if(!listAppliance.includes(item.appliance))
+        {
+            listAppliance.push(item.appliance);
+        }
+
+        item.ustensils.forEach(ustensil => {
+            if (!listUstensils.includes(ustensil)) {
+                listUstensils.push(ustensil);
+            }
+        });
+
+        item.ingredients.forEach(ingr => {
+         if(!listIngredient.includes(ingr.ingredient))
+         {
+            listIngredient.push(ingr.ingredient);
+         }
+        });
+            
+    });
+    fillSelectElement();
+}
+function fillSelectElement(){
+    listIngredient.forEach(item => {
+        const optionIngredient = document.createElement('option');
+        optionIngredient.textContent = item;
+
+        selectIngredient.appendChild(optionIngredient);
+    });
+    listAppliance.forEach(appl => {
+        const optionAppliance = document.createElement('option');
+        optionAppliance.textContent = appl;
+
+        selectAppliance.appendChild(optionAppliance);
+    });
+    listUstensils.forEach(ust => {
+        const optionUstensil = document.createElement('option');
+        optionUstensil.textContent = ust;
+
+        selectUstensil.appendChild(optionUstensil);
+    });
+}
+
 
 function loadRecipe() {
     recipes.forEach(element => {
@@ -87,4 +138,9 @@ function loadRecipe() {
     });
 }
 
-loadRecipe();
+function init() {
+    loadRecipe();
+    getSelectElement();
+}
+
+init();
