@@ -77,6 +77,8 @@ function filterRecipes() {
     if (searchText.length > 0 && searchText.length < 3) return;
 
     let filteredRecipes = [];
+
+    // on parcours toutes les recettes
     for (let i = 0; i<recipes.length; i++){
         let recipe = recipes[i];
 
